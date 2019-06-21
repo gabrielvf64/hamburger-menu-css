@@ -42,6 +42,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.4s ease;
 }
 
 /* Linhas do hamburguer - De cima e de baixo */
@@ -58,4 +59,21 @@
 
 .menu-wrap .hamburguer > div::after {
   top: 10px;
+}
+
+/* Animação no Toggler */
+.menu-wrap .toggler:checked + .hamburguer > div {
+  transform: rotate(135deg);
+}
+
+/* Toggle vira o X */
+.menu-wrap .toggler:checked + .hamburguer > div::before,
+.menu-wrap .toggler:checked + .hamburguer > div::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Rotaciona no hover quando estiver marcado */
+.menu-wrap .toggler:checked:hover + .hamburguer > div {
+  transform: rotate(225deg);
 }
