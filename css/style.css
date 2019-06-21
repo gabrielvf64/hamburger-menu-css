@@ -1,0 +1,79 @@
+:root {
+  --cor-primaria: rgba(13, 110, 139, 0.75);
+  --cor-secundaria: rgba(229, 148, 0, 0.9);
+  --cor-overlay: rgba(24, 39, 51, 0.85);
+  /* Velocidade de abertura do menu*/
+  --menu-speed: 0.75s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  /* Largura e altura são aplicados em todas as partes do elemento: conteúdo, padding e bordas */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+}
+
+.container {
+  max-width: 960px;
+  /* centralizou. igualou os valores da margin? */
+  margin: auto;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+
+#principal {
+  background: var(--cor-primaria);
+  color: #fff;
+  height: 100vh;
+  position: relative;
+}
+
+#principal:before {
+  content: "";
+  background: url("../img/principal.jpg") no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#principal .principal-container {
+  /* "tipo de caixa" flex=alinhado horizontalmente */
+  display: flex;
+  /* empilha os itens flex */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+#principal h1 {
+  font-size: 4rem;
+}
+
+#principal p {
+  font-size: 1.3rem;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: var(--cor-primaria);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  transition: opacity 1s ease-in-out;
+  text-decoration: none;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
